@@ -48,11 +48,13 @@ def main(config, infiles):
                 # prepare date
                 d = row[1].split('.')
 
+                comment = ' '.join(row[5:19]).strip()  # join comment fields
+                comment = re.sub('   *', ' ', comment)  # collapse spaces
                 transaction = {
                         'account': row[0],
                         'date': '%s/%s/%s' % (d[2], d[1], d[0]),
                         'recipient': re.sub('   *', ' ', row[3]),
-                        'comment': re.sub('   *', ' ', ' '.join(row[5:19])),
+                        'comment': comment,
                         'amount': row[19],
                         'currency': row[21]
                         }
