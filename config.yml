@@ -1,0 +1,7 @@
+accounts:
+  123456678:
+    amount: 1234.56
+    currency: EUR
+  234567890:
+    amount: 543.21
+    currency: EUR
