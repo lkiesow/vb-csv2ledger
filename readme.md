@@ -36,7 +36,7 @@ Example
 
 % ./vb-csv2ledger.py -c config.yml .../umsaetze/*.csv > xy.ledger
 
-% ledger -f xy.ledger print                                                                                                                                 (git)-[master] [1] 
+% ledger -f xy.ledger print
 1970/01/01 Initial ammount
     assets:123456678                     1234.56 EUR
     throughput:init
