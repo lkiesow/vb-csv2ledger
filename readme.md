@@ -5,6 +5,9 @@ This script converts bank transaction exported via the Volksbank's web
 interface as CSV file to ledger files. Duplicate entries are removed
 automatically and the output is sorted by date.
 
+Usage
+-----
+
 ```
 usage: vb-csv2ledger.py [-h] [-c CONFIG] csvfiles [csvfiles ...]
 
@@ -19,14 +22,23 @@ optional arguments:
                         Configuration file
 ```
 
-Example Usage
--------------
+Example
+-------
 
 ```
 % ./vb-csv2ledger.py -c config.yml .../umsaetze/*.csv
 
 1970/01/01 Initial ammount
     assets:123456678    1234.56 EUR
+    throughput:init
+
+...
+
+% ./vb-csv2ledger.py -c config.yml .../umsaetze/*.csv > xy.ledger
+
+% ledger -f xy.ledger print                                                                                                                                 (git)-[master] [1] 
+1970/01/01 Initial ammount
+    assets:123456678                     1234.56 EUR
     throughput:init
 
 ...
