@@ -11,6 +11,7 @@ ENTRY = '''
     throughput:%(recipient)s
 '''
 
+
 def main(config, infiles):
 
     data = set()
